@@ -1,0 +1,94 @@
+//FONT//
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+$font-family-base: 'Poppins', sans-serif;
+
+//Modificaciones de Colores
+$primary: rgb(255, 131, 228);
+$secondary: rgb(213, 1, 255);
+$success: rgb(127, 0, 153);
+$danger: rgb(255, 187, 1);
+$warning: rgb(255, 124, 1);
+$info: rgb(236, 195, 245);
+$light: rgb(1, 153, 255);
+$dark: rgb(0, 0, 0);
+$deres: rgb(20, 18, 20);
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "deres":      $deres,
+);
+
+
+//Clases a reutilizar en @extend
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.pad-left {
+    padding-left: 10px;
+}
+
+//Característica Especial//
+
+$enable-shadows: true;
+
+//Importar Sass de Bootstrap//
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Clases Personalizadas//
+
+.card1 {
+    width: 400px;
+    height: 500px;
+    @extend .flex-center;
+    flex-direction: column;
+    color: $primary;
+    @extend .bg-dark;
+    @extend .card;
+}
+.card-body {
+    padding-top: 10px;
+}
+
+.card-title {
+    @extend .pad-left;
+    height: 30px;
+    font-weight: 400;
+}
+
+h5 {
+    color: $light;
+}
+
+.card-text {
+    width: 90%;
+    @extend .pad-left;
+}
+
+p {
+    color: $info;
+}
+
+.card-img-top {
+    width: 90%;
+}
+
+.btn {
+    @extend .flex-center;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 500;
+}
